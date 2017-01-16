@@ -12,6 +12,11 @@
  *
  * commented = require_tree .
  *= require hyperspace/font-awesome.min
- *= require hyperspace/main
+ *= require hyperspace/sass/main
+ *= require fonts
  *= require_self
  */
+
+body {
+  font-family: "OpenSans";
+}
