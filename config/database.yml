@@ -6,10 +6,9 @@
 #
 default: &default
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
   database: codekraft
-  pool: 5
-  timeout: 5000
+  pool: 15
   username: codekraft
   password: codekraft
 
@@ -24,3 +23,4 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
