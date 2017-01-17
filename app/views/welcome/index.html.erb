@@ -14,6 +14,13 @@
 
 <!-- Wrapper -->
 <div id="wrapper">
+  <% if flash[:contact_send] and flash[:contact_send] == true %>
+    <div class="info message">
+      <h3>Message en cours d'envoi</h3>
+      <p>Merci pour votre message, je vous réponds au plus vite.</p>
+    </div>
+  <% end %>
+
 
   <!-- Intro -->
   <section id="intro" class="wrapper style1 fullscreen fade-up">
@@ -35,9 +42,11 @@
         <div class="inner">
           <h2>Code addict</h2>
           <p>Ce qui définit un bon développeur est avant tout la passion. CodeKraft soutient vos développements en alliant passion et expérience de plus de 15 ans de code. </p>
+<!--
           <ul class="actions">
             <li><a href="#" class="button">En savoir plus</a></li>
           </ul>
+-->
         </div>
       </div>
     </section>
@@ -48,9 +57,11 @@
         <div class="inner">
           <h2>Architecte logiciel</h2>
           <p>Vous construiriez une maison sans des fondations solides ? CodeKraft définit avec vous l'architecture logicielle idéale en soutenant deux objectifs : ne pas perdre de temps pour le lancement, assurer à votre outil de pouvoir grandir sans tout reconstruire. </p>
+<!--
           <ul class="actions">
             <li><a href="#" class="button">En savoir plus</a></li>
           </ul>
+-->
         </div>
       </div>
     </section>
@@ -60,9 +71,11 @@
         <div class="inner">
           <h2>Directeur technique</h2>
           <p>Une plateforme qui grandit c'est souvent une équipe qui grandit et des prestations externes qu'il faut savoir gérer. CodeKraft vous accompagne dans la construction de votre équipe et dans vos choix techniques stratégiques.</p>
+<!--
           <ul class="actions">
             <li><a href="#" class="button">En savoir plus</a></li>
           </ul>
+-->
         </div>
       </div>
     </section>
@@ -118,18 +131,19 @@
     <p></p>
     <div class="split style1">
       <section>
-        <form method="post" action="#">
+        <form method="post" action="<%= create_contact_path %>">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
           <div class="field half first">
             <label for="name">Nom</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="contact[name]" id="name" />
           </div>
           <div class="field half">
             <label for="email">Email</label>
-            <input type="text" name="email" id="email" />
+            <input type="text" name="contact[email]" id="email" />
           </div>
           <div class="field">
             <label for="message">Votre message</label>
-            <textarea name="message" id="message" rows="5"></textarea>
+            <textarea name="contact[message]" id="message" rows="5"></textarea>
           </div>
           <ul class="actions">
             <li><a href="" class="button submit">Envoyer</a></li>
@@ -139,19 +153,23 @@
       <section>
         <ul class="contact">
           <li>
-            <h3>Addresse</h3>
-            <span>25, rue lenepveu<br />
+            <h3>Adresse</h3>
+            <span><b>Arnaud DRAZEK</b><br />
+              25, rue lenepveu<br />
               49100 ANGERS
             </span>
           </li>
           <li>
             <h3>Email</h3>
-            <a href="#">contact@codekraft.com</a>
+            <a href="#">contact (at) codekraft (dot) com</a>
           </li>
+<!--
           <li>
             <h3>Phone</h3>
             <span>(000) 000-0000</span>
           </li>
+-->
+<!--
           <li>
             <h3>Social</h3>
             <ul class="icons">
@@ -162,6 +180,7 @@
               <li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
             </ul>
           </li>
+-->
         </ul>
       </section>
     </div>
