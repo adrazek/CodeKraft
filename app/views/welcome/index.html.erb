@@ -115,10 +115,14 @@
         <section class="technos-section">
           <span class="icon major fa-diamond"></span>
           <h3>Technologies</h3>
-          <div class="techno-box">
-          <i class="devicon-css3-plain"></i>
-          <span>Css3</span>
-</div>
+          <% @technos.each do |list| %>
+            <h4><%= list[:type] %></h4>
+            <div class="technos-list">
+              <% list[:values].each do |techno| %>
+                <%= render partial: "common/technobox", locals: {type: techno} %>
+              <% end %>
+            </div>
+          <% end %>
         </section>
       </div>
 <!--
