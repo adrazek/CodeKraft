@@ -44,6 +44,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'capistrano'
+  gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv', '~> 2.0', require: false
