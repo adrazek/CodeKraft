@@ -1,6 +1,8 @@
 set :deploy_to, "/var/www/CodeKraft"
 set :rails_env, :production
 
+set :linked_files, fetch(:linked_files, []).push('.env.production')
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
