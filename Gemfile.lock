@@ -49,7 +49,13 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
+    capistrano-bundler (1.2.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
     capistrano-harrow (0.5.3)
+    capistrano-rbenv (2.1.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
     capistrano3-unicorn (0.2.1)
       capistrano (~> 3.1, >= 3.1.0)
     coffee-rails (4.2.1)
@@ -181,6 +187,8 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capistrano
+  capistrano-bundler
+  capistrano-rbenv (~> 2.0)
   capistrano3-unicorn
   coffee-rails (~> 4.2)
   devicon-rails
