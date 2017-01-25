@@ -1,6 +1,11 @@
+.technos-section h4 {
+  margin-top: 40px;
+}
+
 .technos-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .techno-box i {
@@ -13,7 +18,7 @@
 }
 
 .techno-box {
-  padding: 5px;
+  padding: 5px 10px 5px 5px;
   color: white;
   cursor: pointer;
   display: flex;
@@ -27,7 +32,9 @@
 
 .techno-box span {
   text-align: center;
-  opacity: 0;
+  font-size: .5rem;
+  margin-top: 3px;
+  //opacity: 0;
 }
 
 .techno-box:hover span {

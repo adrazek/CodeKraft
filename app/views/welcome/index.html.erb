@@ -52,7 +52,7 @@
     </section>
     <section>
 
-      <a href="#" class="image"><img src="<%= image_url("pic02.jpg") %>" alt="" data-position="top center" /></a>
+      <a href="#" class="image"><img src="<%= image_url("pic02.jpg") %>" alt="" data-position="top right" /></a>
       <div class="content">
         <div class="inner">
           <h2>Architecte logiciel</h2>
@@ -117,6 +117,7 @@
           <h3>Technologies</h3>
           <% @technos.each do |list| %>
             <h4><%= list[:type] %></h4>
+            <hr style="margin-bottom:10px; margin-top: 10px" />
             <div class="technos-list">
               <% list[:values].each do |techno| %>
                 <%= render partial: "common/technobox", locals: {type: techno} %>
@@ -170,7 +171,7 @@
           </li>
           <li>
             <h3>Email</h3>
-            <a href="#">contact (at) codekraft (dot) com</a>
+            <a href="#">arnaud (at) codekraft (dot) com</a>
           </li>
 <!--
           <li>
